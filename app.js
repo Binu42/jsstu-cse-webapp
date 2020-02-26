@@ -8,7 +8,15 @@ var express = require("express")
 require('dotenv').config();
 
 const path = require("path");
-mongoose.connect(process.env.DB_CONN);
+
+// mongoDB connect
+mongoose.connect(keys.DB_CONN, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+    .then(() => console.log('MongoDB Connected'))
+    .catch(error => console.log(error));
+
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ limit: "50mb" }));

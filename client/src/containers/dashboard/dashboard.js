@@ -12,8 +12,9 @@ class Dashboard extends Component {
     super();
     this.state = {
       subjects: [],
-      "baseUrl": 'https://jssstu-cs.herokuapp.com',
+      // "baseUrl": 'https://jssstu-cs.herokuapp.com',
       // "baseUrl": "http://localhost:4000",
+      "baseUrl": "http://10.24.30.34:4000",
     };
   }
 

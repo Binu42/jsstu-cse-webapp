@@ -14,8 +14,9 @@ export default class App extends Component {
     this.state = {
       cards: [],
       publication: {},
-      baseUrl: "https://jssstu-cs.herokuapp.com",
+      // baseUrl: "https://jssstu-cs.herokuapp.com",
       // "baseUrl": "http://localhost:4000",
+      "baseUrl": "http://10.24.30.34:4000",
       adding: false,
       loader: false
     };
@@ -91,11 +92,11 @@ export default class App extends Component {
           </i>
         </a>
       ) : (
-        <a href="#2" onClick={this.addPublish}>
-          {" "}
-          <i className="material-icons md-48">add_circle</i>
-        </a>
-      ))
+          <a href="#2" onClick={this.addPublish}>
+            {" "}
+            <i className="material-icons md-48">add_circle</i>
+          </a>
+        ))
     );
   };
 
