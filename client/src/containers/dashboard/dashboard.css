@@ -81,3 +81,25 @@ span.tags {
 a {
   cursor: pointer;
 }
+
+#exampleModal input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  height: calc(1.5em + 0.75rem + 5px);
+  padding: 0.1rem 0 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#exampleModal input:focus {
+  outline: none;
+  border: 2px solid #495057;
+}

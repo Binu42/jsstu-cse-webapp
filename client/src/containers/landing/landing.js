@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../../store/actions/index";
+import $ from 'jquery'
+
 
 class Landing extends Component {
   constructor() {
@@ -45,7 +47,13 @@ class Landing extends Component {
     console.log("Dummy link clicked!");
   };
 
-  componentDidMount() { }
+  componentDidMount() {
+    $('.mobile-nav a').on('click', () => {
+      $("body").removeClass("mobile-nav-active");
+      $(".mobile-nav-toggle i").toggleClass("fa-times fa-bars");
+      $(".mobile-nav-overly").fadeOut();
+    })
+  }
 
   componentDidUpdate() { }
 

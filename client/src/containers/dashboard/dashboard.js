@@ -5,6 +5,7 @@ import "./dashboard.css";
 import Navbar from "../landing/landing";
 import Footer from "../landing/Footer";
 import Axios from "axios";
+import $ from 'jquery'
 
 
 class Dashboard extends Component {
@@ -15,6 +16,9 @@ class Dashboard extends Component {
       // "baseUrl": 'https://jssstu-cs.herokuapp.com',
       "baseUrl": "http://localhost:4000",
       // "baseUrl": "http://10.24.30.34:4000",
+      "currentPassword": "",
+      "newPassword": "",
+      "confirmPassword": ""
     };
   }
 
@@ -60,6 +64,21 @@ class Dashboard extends Component {
     });
   };
 
+  changePassword = event => {
+    event.preventDefault();
+    console.log('change password function')
+    $('body').removeClass('modal-open');
+    $('body').css({ "padding-top": "0", "padding-bottom": "0", "padding-left": "0", "padding-right": "0" })
+    $('#exampleModal').toggle();
+    $('.modal-backdrop').remove();
+  };
+
+  myChangeHandler = (event) => {
+    let nam = event.target.name;
+    let val = event.target.value;
+    this.setState({ [nam]: val });
+  }
+
   componentDidMount() {
     Axios.get(this.state.baseUrl + '/subject/' + this.props.user._id)
       .then(subjects => {
@@ -104,7 +123,39 @@ class Dashboard extends Component {
                     ))
                   }
                 </p>
-                <a href="/change/password" className="btn btn-info">Change Password</a>
+                <button type="button" className="btn btn-primary my-3 text-center" data-toggle="modal" data-target="#exampleModal">Change Password</button>
+
+                <div className="modal fade bd-example-modal-lg" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal-dialog modal-dialog-centered" role="document">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h5 className="modal-title text-center" id="exampleModalLabel">Change Password</h5>
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div className="modal-body text-left">
+                        <div className="form-group">
+                          <label htmlFor="exampleInputEmail1">Current Password</label>
+                          <input type="password" id="exampleInputEmail1" value={this.state.currentPassword} placeholder="Enter your current Password" onChange={this.myChangeHandler} />
+                        </div>
+                        <div className="form-group">
+                          <label htmlFor="exampleInputPassword1">Password</label>
+                          <input type="password" id="exampleInputPassword1" value={this.state.newPassword} placeholder="Enter new password" onChange={this.myChangeHandler} />
+                        </div>
+                        <div className="form-group">
+                          <label htmlFor="exampleInputPassword2">Confirm Password</label>
+                          <input type="password" id="exampleInputPassword2" value={this.state.confirmPassword} placeholder="Retype new password" onChange={this.myChangeHandler} />
+                        </div>
+                      </div>
+
+                      <div className="modal-footer">
+                        <button type="button" className="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="button" onClick={this.changePassword} dat-dismiss="modal" className="btn btn-success">Confirm Change</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
