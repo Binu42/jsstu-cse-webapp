@@ -11,6 +11,7 @@ import Awards from "./containers/dashboard/awards/Awards";
 import Training from "./containers/dashboard/trainingCon/Training";
 import Subject from "./containers/dashboard/subjects/Subject";
 import TrainingAttended from './containers/dashboard/trainingAtt/Training'
+import ChangePassword from './containers/changePassword/ChangePassword'
 import Faculty from "./containers/faculty/faculty";
 
 import { connect } from "react-redux";
@@ -42,19 +43,21 @@ class App extends Component {
             path="/dashboard" exact
             render={() => <Dashboard loggedIn={this.props.loggedIn} user={this.props.user} />}
           />
-          <Route path="/dashboard/publications" render={() => <Publication loggedIn={this.props.loggedIn} user={this.props.user} />}
+          <Route exact path="/dashboard/publications" render={() => <Publication loggedIn={this.props.loggedIn} user={this.props.user} />}
           />
-          <Route path="/dashboard/researchs" render={() => <Research loggedIn={this.props.loggedIn} user={this.props.user} />}
+          <Route exact path="/dashboard/researchs" render={() => <Research loggedIn={this.props.loggedIn} user={this.props.user} />}
           />
-          <Route path="/dashboard/awards" render={() => <Awards loggedIn={this.props.loggedIn} user={this.props.user} />}
+          <Route exact path="/dashboard/awards" render={() => <Awards loggedIn={this.props.loggedIn} user={this.props.user} />}
           />
-          <Route path="/dashboard/training/conducted" render={() => <Training loggedIn={this.props.loggedIn} user={this.props.user} />}
+          <Route exact path="/dashboard/training/conducted" render={() => <Training loggedIn={this.props.loggedIn} user={this.props.user} />}
           />
-          <Route path="/dashboard/training/attended" render={() => <TrainingAttended loggedIn={this.props.loggedIn} user={this.props.user} />}
+          <Route exact path="/dashboard/training/attended" render={() => <TrainingAttended loggedIn={this.props.loggedIn} user={this.props.user} />}
           />
-          <Route path="/dashboard/subject" render={() => <Subject loggedIn={this.props.loggedIn} user={this.props.user} />}
+          <Route exact path="/dashboard/subject" render={() => <Subject loggedIn={this.props.loggedIn} user={this.props.user} />}
           />
-          <Route path="/faculty" render={() => <Faculty />} />
+          <Route exact path="/change/password" render={() => <ChangePassword loggedIn={this.props.loggedIn} user={this.props.user} />}
+          />
+          <Route exact path="/faculty" render={() => <Faculty loggedIn={this.props.loggedIn} user={this.props.user} />} />
           <Redirect to="/" />
         </Switch>
       );

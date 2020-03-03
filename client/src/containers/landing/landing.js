@@ -40,7 +40,6 @@ class Landing extends Component {
       pathname: "/dashboard"
     });
   };
-  
 
   onDummyLinkHandler = () => {
     console.log("Dummy link clicked!");

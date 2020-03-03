@@ -4,10 +4,10 @@ import Footer from "../landing/Footer";
 import "./faculty.css";
 import "./version.css";
 
-const Faculty = () => {
+const Faculty = ({ loggedIn }) => {
   return (
     <div>
-      <Navbar />
+      <Navbar loggedIn={loggedIn} />
       <div id="faculty" className="section wb">
         <div className="container">
           <div className="section-title text-center mt-5">

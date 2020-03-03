@@ -10,7 +10,7 @@ require('dotenv').config();
 const path = require("path");
 
 // mongoDB connect
-mongoose.connect(keys.DB_CONN, {
+mongoose.connect(process.env.DB_CONN, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
