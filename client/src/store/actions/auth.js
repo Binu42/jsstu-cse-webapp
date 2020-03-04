@@ -85,20 +85,21 @@ export const loginFailure = (error) => {
 };
 
 export const login = (formData) => {
-	console.log(formData);
+	// console.log(formData);
 	return dispatch => {
 		dispatch(loginStart());
 		const url = baseurl + '/login';
 		axios.post(url, formData)
 			.then(response => {
-				console.log('login response: ')
-				console.log(response.data)
+				// console.log('login response: ')
+				// console.log(response.data)
 				if (response.status === 200) {
 					localStorage.setItem('token', response.data.token);
 					dispatch(loginSuccess(response.data));
 				}
 			}).catch(error => {
 				dispatch(loginFailure(error));
+				alert('Incorrect Credentials')
 			})
 	};
 }

@@ -99,12 +99,47 @@ router.post('/login', (req, res) => {
                 });
               });
           } else {
-            errors.password = "Password is incorrect";
-            res.status(400).json(errors);
+            res.status(400).json({ errors: "Password is incorrect" });
           }
         });
     });
 });
+
+router.post('/change/password', (req, res) => {
+  // console.log("body", req.body, req.body.user, req.body.currentPassword)
+  User.findOne({ username: req.body.user })
+    .then(user => {
+      if (user) {
+        // console.log("user", user)
+        bcrypt.compare(req.body.currentPassword, user.password, (error, isMatch) => {
+          if (error) throw error;
+          else if (isMatch) {
+            const hashPwd = user.hashPassword(req.body.newPassword);
+            var userObj = {
+              username: req.body.user,
+              password: hashPwd,
+              name: user.name,
+              designation: user.designation,
+              mode: user.mode
+            };
+            User.updateOne({ username: req.body.user }, userObj, function (err, newlyCreated) {
+              if (err) {
+                res.status(400).json(err)
+              } else {
+                // console.log(newlyCreated);
+                res.status(200).json(newlyCreated)
+              }
+            })
+          } else {
+            res.status(202).send('Not allowed to change password');
+          }
+        })
+      } else {
+        // console.log(user);
+        res.status(404).send('no user found');
+      }
+    })
+})
 
 router.post('/logout', (req, res) => {
   if (req.user) {
