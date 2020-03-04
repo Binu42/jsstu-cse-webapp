@@ -6,10 +6,10 @@ export class Footer extends Component {
         return (
             <footer id="footer" className="mt-auto">
                 <div className="footer-top p-4 mt-4">
-                    <div className="row" style={{'margin': '0'}}>
+                    <div className="row" style={{ 'margin': '0' }}>
                         <div className="col-lg-5 col-md-6 d-none d-md-block footer-info">
-                            <h3 className="font-weight-bold">JSS STU</h3>
-                            <p>
+                            <h3 className="title">JSS STU</h3>
+                            <p className="text-justify" style={{ fontFamily: "Nunito", fontSize: "16px", lineHeight: "22px" }}>
                                 JSS Science and Technology University is one of the recent
                                 additions to the institutions administered by JSS
                                 Mahavidyapeetha, and is the second University being
@@ -28,62 +28,62 @@ export class Footer extends Component {
                                 measures to improve quality of workforce.
                                     </p>
                         </div>
-                        <div className="text-center col-lg-4 col-md-6 footer-contact">
-                            <h3>Contact Us</h3>
-                            <p>
-                                JSS Science and Technology University (Formerly SJCE),
+                        <div className="text-left col-lg-4 col-md-6 footer-contact">
+                            <div className="p-2">
+                                <h3>Contact Us</h3>
+                                <p>
+                                    JSS Science and Technology University (Formerly SJCE),
                       <br />
-                                JSS TI Campus,
+                                    JSS TI Campus,
                       <br />
-                                Mysuru 570006
+                                    Mysuru 570006
                       <br />
-                                <strong>Phone:</strong> 0821-2548285,86,87
+                                    <strong>Phone:</strong> 0821-2548285,86,87
                       <br />
-                                <strong>Email:</strong> office@jssstuniv.in
+                                    <strong>Email:</strong> office@jssstuniv.in
                       <br />
-                            </p>
+                                </p>
 
-                            <div className="social-links">
-                                <a
-                                    href="https://twitter.com/jssstuniv"
-                                    className="twitter"
-                                >
-                                    <i className="fa fa-twitter"></i>
-                                </a>
-                                <a
-                                    href="https://www.facebook.com/JSSSTUNIV/"
-                                    className="facebook"
-                                >
-                                    <i className="fa fa-facebook"></i>
-                                </a>
-                                <a
-                                    href="https://www.instagram.com/jssstuniv/"
-                                    className="instagram"
-                                >
-                                    <i className="fa fa-instagram"></i>
-                                </a>
-                                <a
-                                    href="https://www.youtube.com/channel/UCQxvuSKHiwlSzXpQX2rSRDw"
-                                    className="youtube"
-                                >
-                                    <i className="fa fa-youtube-play"></i>
-                                </a>
-                                <a
-                                    href="https://www.linkedin.com/in/jss-science-and-technology-university-301983175/"
-                                    className="linkedin"
-                                >
-                                    <i className="fa fa-linkedin"></i>
-                                </a>
+                                <div className="social-links">
+                                    <a
+                                        href="https://twitter.com/jssstuniv"
+                                        className="twitter"
+                                    >
+                                        <i className="fa fa-twitter"></i>
+                                    </a>
+                                    <a
+                                        href="https://www.facebook.com/JSSSTUNIV/"
+                                        className="facebook"
+                                    >
+                                        <i className="fa fa-facebook"></i>
+                                    </a>
+                                    <a
+                                        href="https://www.instagram.com/jssstuniv/"
+                                        className="instagram"
+                                    >
+                                        <i className="fa fa-instagram"></i>
+                                    </a>
+                                    <a
+                                        href="https://www.youtube.com/channel/UCQxvuSKHiwlSzXpQX2rSRDw"
+                                        className="youtube"
+                                    >
+                                        <i className="fa fa-youtube-play"></i>
+                                    </a>
+                                    <a
+                                        href="https://www.linkedin.com/in/jss-science-and-technology-university-301983175/"
+                                        className="linkedin"
+                                    >
+                                        <i className="fa fa-linkedin"></i>
+                                    </a>
+                                </div>
                             </div>
+
                         </div>
 
                         <div className="col-lg-3 col-md-6  d-none d-lg-block footer-newsletter">
                             <h3>Our Newsletter</h3>
-                            <p>
-                                Tamen quem nulla quae legam multos aute sint culpa legam
-                                noster magna veniam enim veniam illum dolore legam minim
-                                quorum culpa amet magna export quem marada parida nodela
-                                caramase seza.
+                            <p className="text-justify" style={{ fontFamily: "Nunito", fontSize: "16px", lineHeight: "22px" }}>
+                                Subscribe to our Newsletter to get Latest updates, event happening in CS Department, JSSSTU
                     </p>
                             <form action="" method="post">
                                 <input type="email" name="email" />

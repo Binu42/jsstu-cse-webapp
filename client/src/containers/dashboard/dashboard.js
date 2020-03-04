@@ -5,7 +5,6 @@ import "./dashboard.css";
 import Navbar from "../landing/landing";
 import Footer from "../landing/Footer";
 import Axios from "axios";
-import $ from 'jquery'
 
 
 class Dashboard extends Component {
@@ -18,9 +17,13 @@ class Dashboard extends Component {
       // "baseUrl": "http://10.24.30.34:4000",
       "currentPassword": "",
       "newPassword": "",
-      "confirmPassword": ""
+      "confirmPassword": "",
+      'msg': "",
+      'user': "",
+      'status': ""
     };
   }
+
 
   publications = event => {
     event.preventDefault();
@@ -66,12 +69,31 @@ class Dashboard extends Component {
 
   changePassword = event => {
     event.preventDefault();
-    console.log('change password function')
-    $('body').removeClass('modal-open');
-    $('body').css({ "padding-top": "0", "padding-bottom": "0", "padding-left": "0", "padding-right": "0" })
-    $('#exampleModal').toggle();
-    $('.modal-backdrop').remove();
+    // console.log(this.props.user)
+    if (this.state.confirmPassword !== this.state.newPassword || this.state.confirmPassword === "" || this.state.newPassword === "" || this.state.currentPassword === "") {
+      this.setState({ msg: "Password Doesn't Matched", 'status': 'danger' })
+      setTimeout(() => {
+        this.setState({ msg: "" });
+      }, 2000);
+    } else {
+      Axios.post(`${this.state.baseUrl}/change/password`, this.state).then(response => {
+        // console.log(response)
+        if (response.status === 200) {
+          this.setState({ msg: "Password Changed Successfully", 'status': 'success' })
+          this.setState({ "confirmPassword": "", "newPassword": "", "currentPassword": "" })
+        } else {
+          this.setState({ msg: "Current Entered password is not correct", status: 'danger' })
+        }
+        setTimeout(() => {
+          this.setState({ msg: "" });
+        }, 2000);
+      })
+    }
   };
+
+  alert = () => {
+    return (<div className={'alert alert-' + this.state.status}>{this.state.msg}</div>)
+  }
 
   myChangeHandler = (event) => {
     let nam = event.target.name;
@@ -80,6 +102,7 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
+    this.setState({ 'user': this.props.user.username })
     Axios.get(this.state.baseUrl + '/subject/' + this.props.user._id)
       .then(subjects => {
         // console.log(subjects);
@@ -135,23 +158,24 @@ class Dashboard extends Component {
                         </button>
                       </div>
                       <div className="modal-body text-left">
+                        {this.state.msg !== "" ? this.alert() : ""}
                         <div className="form-group">
                           <label htmlFor="exampleInputEmail1">Current Password</label>
-                          <input type="password" id="exampleInputEmail1" value={this.state.currentPassword} placeholder="Enter your current Password" onChange={this.myChangeHandler} />
+                          <input type="password" id="exampleInputEmail1" name="currentPassword" value={this.state.currentPassword} placeholder="Enter your current Password" onChange={this.myChangeHandler} required />
                         </div>
                         <div className="form-group">
                           <label htmlFor="exampleInputPassword1">Password</label>
-                          <input type="password" id="exampleInputPassword1" value={this.state.newPassword} placeholder="Enter new password" onChange={this.myChangeHandler} />
+                          <input type="password" id="exampleInputPassword1" name="newPassword" value={this.state.newPassword} placeholder="Enter new password" onChange={this.myChangeHandler} required />
                         </div>
                         <div className="form-group">
                           <label htmlFor="exampleInputPassword2">Confirm Password</label>
-                          <input type="password" id="exampleInputPassword2" value={this.state.confirmPassword} placeholder="Retype new password" onChange={this.myChangeHandler} />
+                          <input type="password" id="exampleInputPassword2" name="confirmPassword" value={this.state.confirmPassword} placeholder="Retype new password" onChange={this.myChangeHandler} required />
                         </div>
                       </div>
 
                       <div className="modal-footer">
                         <button type="button" className="btn btn-danger" data-dismiss="modal">Close</button>
-                        <button type="button" onClick={this.changePassword} dat-dismiss="modal" className="btn btn-success">Confirm Change</button>
+                        <button type="button" onClick={this.changePassword} id="buttonChangePassword" className="btn btn-success">Confirm Change</button>
                       </div>
                     </div>
                   </div>

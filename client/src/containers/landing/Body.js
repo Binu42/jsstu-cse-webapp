@@ -7,7 +7,7 @@ class Body extends Component {
   }
   render() {
     return (
-      <div>
+      <div style={{ "fontFamily": "Nunito" }}>
         <section id="intro" className="clearfix">
           <h1 className="text-center text-white font-weight-bold p-2">
             Department Of Computer Science & Engineering
@@ -44,7 +44,7 @@ class Body extends Component {
             <div className="container">
               <header className="section-header">
                 <h3>ABOUT US</h3>
-                <p>
+                <p className="text-justify" style={{ "fontSize": "20px" }}>
                   The inception of Department of Computer Science and
                   Engineering (CS&E) was one among the first to be established
                   in the State of Karnataka in the year 1982.
@@ -59,32 +59,39 @@ class Body extends Component {
                   assets provided by JSS Science and Technology and its
                   surrounding communities.
                   <br />
-                  <br />
                   The department is actively involved in International
                   collaborative research and also in sponsored research projects
                   through various funding agencies:
                   <br />
                 </p>
-                <ol typeof="I" className="mb-4">
+                <hr />
+                <ol typeof="I" className="mb-4" style={{ "fontSize": "20px" }}>
                   <li>Science and Engineering Research Board (SERB)</li>
                   <li>
-                    Ministry of Human Resource Development (MHRD) 3. University
-                    Grant Commission (UGC)
+                    Ministry of Human Resource Development (MHRD)
+                  </li>
+                  <li>
+                    University
+                      Grant Commission (UGC)
                   </li>
                   <li>Department of Science and Technology (DST)</li>
                 </ol>
               </header>
 
+              <br />
+              <br />
               <div className="row mt-2 p-2 about-container">
                 <div className="col-md-6">
                   <div className="icon-box wow fadeInUp">
                     <div className="icon">
-                      <i className="fa fa-shopping-bag"></i>
+                      <i className="material-icons">
+                        visibility
+                      </i>
                     </div>
                     <h4 className="title">
                       <a href="#1">Vision</a>
                     </h4>
-                    <p className="description">
+                    <p className="description text-justify">
                       Advancing JSS S&T University as a leader in education,
                       research and technology on the international arena. To
                       provide the students a universal platform to launch their
@@ -102,13 +109,13 @@ class Body extends Component {
                 <div className="col-md-6">
                   <div className="icon-box wow fadeInUp" data-wow-delay="0.2s">
                     <div className="icon">
-                      <i className="fa fa-photo"></i>
+                      <i className="fas fa-location-arrow"></i>
                     </div>
                     <h4 className="title">
                       <a href="#1">Mission </a>
                     </h4>
 
-                    <p className="description">
+                    <p className="description text-justify">
                       Education, research and social outreach are the core
                       doctrines of JSS S&T University that are responsible for
                       accomplishment of in-depth knowledge base, professional
@@ -140,7 +147,7 @@ class Body extends Component {
                     </div> */}
               </div>
 
-              <div className="row about-extra">
+              {/* <div className="row about-extra">
                 <div className="col-md-4 wow fadeInUp">
                   <img
                     src={
@@ -151,24 +158,63 @@ class Body extends Component {
                   />
                 </div>
                 <div className="col-md-8 wow fadeInUp pt-5 pt-md-0">
-                  <h4>Our Beloved HOD</h4>
-                  <p>
-                    Dr. M P Pushpalatha, HOD pf department of Computer Science
-                    and Engineering, has mastered in the field of... graduated
-                    from.....
+                  <h4 className="title text-center" style={{ "paddingBottom": "10px" }}>Our Beloved HOD</h4>
+                  <p className="description text-justify">
+                    Dr. M P Pushpalatha, HOD 0f department of Computer Science
+                      and Engineering. Professor in the department of Computer Science and
+                      Engineering, with nearly three decades of teaching
+                      experience. Passionate and committed to inspire students to
+                      pursue academic and personal excellence. Driven by the
+                      motto, “Anything worth doing is worth doing well,” to create
+                      a challenging and engaging learning environment for students
+                      and self. My research focuses mainly on Machine Learning and
+                      Healthcare Informatics with a particular emphasis on the
+                      applications of healthcare technology to socially relevant
+                      issues. Currently guiding four (4) Ph.d Research scholars.
                   </p>
-                  <p>
-                    Professor in the department of Computer Science and
-                    Engineering, with nearly three decades of teaching
-                    experience. Passionate and committed to inspire students to
-                    pursue academic and personal excellence. Driven by the
-                    motto, “Anything worth doing is worth doing well,” to create
-                    a challenging and engaging learning environment for students
-                    and self. My research focuses mainly on Machine Learning and
-                    Healthcare Informatics with a particular emphasis on the
-                    applications of healthcare technology to socially relevant
-                    issues. Currently guiding four (4) Ph.d Research scholars.
+                </div>
+              </div> */}
+              <div className="row about-extra">
+                <div className="col-lg-6 wow fadeInUp">
+                  <div className="d-flex justify-content-center">
+                    <img
+                      src={
+                        "https://jssstuniv.in/wp-content/uploads/2018/11/MPP-Picture-500x500.jpg"
+                      }
+                      className="img-fluid w-80 img-hod mb-4"
+                      alt=""
+                      width="300px"
+                    />
+                  </div>
+                  <h4 className="title" style={{ 'paddingBottom': "3px" }}>Education Qualifications</h4>
+                  <p className="description text-justify">
+                    BE, M.Tech, Ph. D.
+                      Journals Published:7
+                      Conferences Presented: 28
+                      Research and Development projects submitted: 6
+                      Research and Development projects Awarded: 3
+                      Training Programs attended: More than 40
+                      Training Programs conducted and coordinated: More than 25
+                      Number of PhD students pursuing: 04
                   </p>
+
+                </div>
+                <div className="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+                  <h4 className="title" style={{ 'paddingBottom': "3px" }}>Our Beloved HOD</h4>
+                  <p className="description text-justify">
+                    Professor in the department of Computer Science and Engineering, with nearly three
+                    decades of teaching experience. Passionate and committed to inspire students to pursue academic
+                    and personal excellence. Driven by the motto, “Anything worth doing is worth doing well,” to create
+                    a challenging and engaging learning environment for students and self. My research focuses mainly on
+                    Machine Learning and Healthcare Informatics with a particular emphasis on the applications of healthcare technology
+                    to socially relevant issues. Currently guiding four (4) Ph.d Research scholars.
+            </p>
+                  <h4 className="title" style={{ 'paddingBottom': "3px" }}>Research and Development</h4>
+                  <p className="description text-justify">
+                    Healthcare informatics, a multi-disciplinary field, the movement towards personalized healthcare, faces challenges in management, data integration, and computer aided diagnoses. Machine learning a complex field in itself offers a wide range of tools, techniques, and frameworks that can be exploited to address these challenges. The potential role of machine learning to mitigate the challenges
+                    faced is the focused area of research and development.
+                    </p>
+
                 </div>
               </div>
             </div>
@@ -186,13 +232,9 @@ class Body extends Component {
           {/* SERVICES ABOUT SECTION */}
 
           <section id="services" className="section-bg">
-            <div className="container">
+            <div className="p-4">
               <header className="section-header">
                 <h3>Services</h3>
-                <p>
-                  Laudem latine persequeris id sed, ex fabulas delectus quo. No
-                  vel partiendo abhorreant vituperatoribus.
-                </p>
               </header>
 
               <div className="row">
@@ -207,16 +249,13 @@ class Body extends Component {
                         style={{ color: "#ff689b" }}
                       ></i>
                     </div>
-                    <h4 className="title">
+                    <h4 className="title" style={{ "paddingBottom": "4px" }}>
                       <a href="http://jssstuniv.in/academics-calendar-of-events/">
                         Resources
                       </a>
                     </h4>
-                    <p className="description">
-                      Voluptatum deleniti atque corrupti quos dolores et quas
-                      molestias excepturi sint occaecati cupiditate non
-                      provident
-                    </p>
+                    <p className="description">ACADEMIC CALENDAR – Odd Semester 2019-20 (B.E. AND BCA) for I, III, V, VII Semesters
+                </p>
                   </div>
                 </div>
                 <div
@@ -230,101 +269,50 @@ class Body extends Component {
                         style={{ color: "#e9bf06" }}
                       ></i>
                     </div>
-                    <h4 className="title">
+                    <h4 className="title" style={{ "paddingBottom": "4px" }}>
                       <a href="/faculty">Faculties</a>
                     </h4>
+                    <p className="description">Meet our hardworking and dedicated Professors.</p>
+                  </div>
+                </div>
+
+                <div className="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                  <div className="box">
+                    <div className="icon"><i className="ion-ios-paper-outline" style={{ "color": "#3fcdc7" }}></i></div>
+                    <h4 className="title" style={{ "paddingBottom": "4px" }}><a href="#!">Program Educational Objectives (PEOs)</a></h4>
                     <p className="description">
-                      Minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat tarad limino ata
+                      PEO1: Excel in professional career across industries and institutes that emphasizes on Innovation and problem solving.
+                      <br />
+                      PEO2: Collaborate successfully with peers, colleagues and organizations.<br />
+                      PEO3: Work as ethical and responsible members of the computing profession and society.<br />
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                  <div className="box">
+                    <div className="icon"><i className="ion-ios-speedometer-outline" style={{ "color": "#41cf2e" }}></i></div>
+                    <h4 className="title" style={{ "paddingBottom": "4px" }}><a href="#!">Program Specific Outcomes (PSOs)</a></h4>
+                    <p className="description">
+                      PSO-1:  Problem-Solving Skills<br />
+                      PSO-2: Knowledge of Computer Systems<br />
+                      PSO-3: Successful Career and Entrepreneurship<br />
+                      PSO-4: Computing and Research Ability<br />
                     </p>
                   </div>
                 </div>
 
-                <div
-                  className="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp"
-                  data-wow-delay="0.1s"
-                  data-wow-duration="1.4s"
-                >
+                <div className="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
                   <div className="box">
-                    <div className="icon">
-                      <i
-                        className="ion-ios-paper-outline"
-                        style={{ color: "#3fcdc7" }}
-                      ></i>
-                    </div>
-                    <h4 className="title">
-                      <a href="#1">Past Events</a>
-                    </h4>
-                    <p className="description">
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur
-                    </p>
+                    <div className="icon"><i className="ion-ios-world-outline" style={{ "color": "#d6ff22" }}></i></div>
+                    <h4 className="title" style={{ "paddingBottom": "4px" }}><a href="https://jssstuniv.in/departments-cs/#tab-5c1b9ffb7976f">Department Acheivements</a></h4>
+                    <p className="description"> Our Department acheivements in recent years.</p>
                   </div>
                 </div>
-                <div
-                  className="col-md-6 col-lg-5 wow bounceInUp"
-                  data-wow-delay="0.1s"
-                  data-wow-duration="1.4s"
-                >
+                <div className="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
                   <div className="box">
-                    <div className="icon">
-                      <i
-                        className="ion-ios-speedometer-outline"
-                        style={{ color: "#41cf2e" }}
-                      ></i>
-                    </div>
-                    <h4 className="title">
-                      <a href="#1">Upcoming Events</a>
-                    </h4>
-                    <p className="description">
-                      Excepteur sint occaecat cupidatat non proident, sunt in
-                      culpa qui officia deserunt mollit anim id est laborum
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  className="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp"
-                  data-wow-delay="0.2s"
-                  data-wow-duration="1.4s"
-                >
-                  <div className="box">
-                    <div className="icon">
-                      <i
-                        className="ion-ios-world-outline"
-                        style={{ color: " #d6ff22" }}
-                      ></i>
-                    </div>
-                    <h4 className="title">
-                      <a href="https://jssstuniv.in/departments-cs/#tab-5c1ba017eed61">
-                        Department Acheivements
-                      </a>
-                    </h4>
-                    <p className="description">
-                      At vero eos et accusamus et iusto odio dignissimos ducimus
-                      qui blanditiis praesentium voluptatum deleniti atque
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className="col-md-6 col-lg-5 wow bounceInUp"
-                  data-wow-delay="0.2s"
-                  data-wow-duration="1.4s"
-                >
-                  <div className="box">
-                    <div className="icon">
-                      <i
-                        className="ion-ios-clock-outline"
-                        style={{ color: " #4680ff" }}
-                      ></i>
-                    </div>
-                    <h4 className="title">
-                      <a href="#1">Department Workshops/Conference</a>
-                    </h4>
-                    <p className="description">
-                      Et harum quidem rerum facilis est et expedita distinctio.
-                      Nam libero tempore, cum soluta nobis est eligendi
-                    </p>
+                    <div className="icon"><i className="ion-ios-clock-outline" style={{ "color": "#4680ff" }}></i></div>
+                    <h4 className="title" style={{ "paddingBottom": "4px" }}><a href="https://jssstuniv.in/departments-cs/#tab-5c1ba017eed61">Department Workshops/Conference</a></h4>
+                    <p className="description">Conferences and Workshops held in the past years.</p>
                   </div>
                 </div>
               </div>
@@ -339,10 +327,6 @@ class Body extends Component {
             <div className="container">
               <header className="section-header">
                 <h3>Department Stats</h3>
-                <p>
-                  Laudem latine persequeris id sed, ex fabulas delectus quo. No
-                  vel partiendo abhorreant vituperatoribus.
-                </p>
               </header>
 
               <div className="row counters">
@@ -391,7 +375,7 @@ class Body extends Component {
                       />
                       <h3>Akhilesh Yadav</h3>
                       <h4>Indian Politician</h4>
-                      <p>
+                      <p className="description text-justify">
                         "Akhilesh Yadav, born on 1 July 1973, is the current and
                         the 20th Chief Minister of the Indian state of Uttar
                         Pradesh. He is the youngest person to have held this
@@ -424,7 +408,7 @@ class Body extends Component {
                       />
                       <h3>Shanmugam Manjunath</h3>
                       <h4>Indian Oil Corporation Officer(Grade A)</h4>
-                      <p>
+                      <p className="description text-justify">
                         "Shanmugam Manjunath (23 February 1978 – 19 November
                         2005) was a manager (grade A officer) for the Indian Oil
                         Corporation (IOC) who was murdered for sealing a corrupt
@@ -452,7 +436,7 @@ class Body extends Component {
                       />
                       <h3>Nidhi Subbaiah</h3>
                       <h4>Indian Actress</h4>
-                      <p>
+                      <p className="description text-justify">
                         "Nidhi Subbaiah (born 16 February 1987) is an Indian
                         film actress and model, who has appeared in various
                         television advertisements and in South Indian Films, she
@@ -482,7 +466,7 @@ class Body extends Component {
                       />
                       <h3>B M Jayeshankar</h3>
                       <h4>Builder/Real Estate</h4>
-                      <p>
+                      <p className="description text-justify">
                         "Coming from a modest background, Mr. B M Jayeshankar
                         always had an urge to be different. After completing his
                         Civil Engineering from Sri. Jaychamarajendra College of
@@ -513,13 +497,9 @@ class Body extends Component {
             <div className="container">
               <div className="section-header">
                 <h3>CLUBS</h3>
-                <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque
-                </p>
               </div>
 
-              <div className="row no-gutters owl-carousel clubs-carousel wow fadeInUp">
+              <div className="row no-gutters owl-carousel clubs-carousel wow fadeInUp" style={{ "height": "280px" }}>
                 <div className="member">
                   <img
                     src={
@@ -552,9 +532,10 @@ class Body extends Component {
                 <div className="member">
                   <img
                     src={
-                      "http://www.innovatekarnataka.com/wp-content/uploads/2015/04/02-K-tech_logo_1791x481-04.png"
+                      "http://k-tech.org/wp-content/uploads/2018/08/ik-300x81.png"
                     }
                     className="img-fluid"
+                    width="140px"
                     alt=""
                   />
                   <div className="member-info">
@@ -607,35 +588,6 @@ class Body extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="member">
-                  <img
-                    src={
-                      "https://scontent.fblr4-2.fna.fbcdn.net/v/t1.0-9/22815067_1974239449455990_8227355219962562949_n.jpg?_nc_cat=111&_nc_oc=AQnccq1h9VYZj2QLsRLHqbdFCp76mf3xPDvnTyzPScfzgSA0ppgNnq13Kx6GnJ91yTY&_nc_ht=scontent.fblr4-2.fna&oh=0298000eb5d52a92f3fb3e2beff7b6c8&oe=5E2DF24E"
-                    }
-                    className="img-fluid"
-                    alt=""
-                  />
-                  <div className="member-info">
-                    <div className="member-info-content">
-                      <h4>Sparsh Talks</h4>
-                      <span>Accountant</span>
-                      <div className="social">
-                        <a href="#1">
-                          <i className="fa fa-twitter"></i>
-                        </a>
-                        <a href="#1">
-                          <i className="fa fa-facebook"></i>
-                        </a>
-                        <a href="#1">
-                          <i className="fa fa-google-plus"></i>
-                        </a>
-                        <a href="#1">
-                          <i className="fa fa-linkedin"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </section>
@@ -648,10 +600,6 @@ class Body extends Component {
             <div className="container">
               <div className="section-header">
                 <h3>Our Recruiters</h3>
-                <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque dere santome nida.
-                </p>
               </div>
 
               <div className="row no-gutters clients-wrap clearfix wow fadeInUp owl-carousel company-carousel">
@@ -758,7 +706,7 @@ class Body extends Component {
                       }
                       title="map"
                       frameBorder="0"
-                      style={{ border: "0", width: "100%", height: "312px" }}
+                      style={{ border: "0", width: "100%", height: "402px" }}
                       allowFullScreen
                     ></iframe>
                   </div>

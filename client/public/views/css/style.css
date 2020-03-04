@@ -1,7 +1,7 @@
 body {
   background: #fff;
   color: #444;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Nunito', 'Open Sans', sans-serif;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -460,7 +460,8 @@ h6 {
   position: relative;
 }
 
-.section-header p, .section-header ol {
+.section-header p,
+.section-header ol {
   /* text-align: center; */
   margin: auto;
   font-size: 18px;
@@ -555,21 +556,24 @@ h6 {
 #about .about-container .icon-box .title {
   margin-left: 80px;
   font-weight: 600;
-  margin-bottom: 5px;
-  font-size: 18px;
+  padding-top: 14px;
+  margin-bottom: 10px;
+  font-size: 24px;
 }
 
 #about .about-container .icon-box .title a {
   color: #283d50;
 }
 
-.col-sm-12{
+.col-sm-12 {
   padding: 0;
 }
 
-#about .about-container .icon-box .description {
+#about .about-container .icon-box .description,
+.description {
   line-height: 24px;
-  font-size: 16px;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 #about .about-extra {
@@ -595,11 +599,11 @@ h6 {
 
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%333' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
- }
- 
- .carousel-control-next-icon {
-   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%333' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
- }
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%333' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
 
 .img-hod,
 .img-branch {
@@ -658,7 +662,7 @@ h6 {
 }
 
 #services .description {
-  font-size: 14px;
+  font-size: 16px;
   margin-left: 40px;
   line-height: 24px;
   margin-bottom: 0;
@@ -1276,34 +1280,33 @@ h6 {
   transition: 0.3s;
 }
 
-.fa-twitter{
+.fa-twitter {
   color: #04ffd5;
 }
 
-.fa-facebook{
+.fa-facebook {
   color: #003166;
 }
 
-.fa-instagram{
+.fa-instagram {
   color: #ff4800;
 }
 
-.fa-youtube-play{
+.fa-youtube-play {
   color: #ff0000;
 }
 
-.fa-linkedin{
+.fa-linkedin {
   color: #00f7ff;
 }
 
-#footer{
+#footer {
   margin-top: auto;
 }
 
 #footer .footer-top .social-links a:hover {
   background: #424242;
 }
-
 
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
@@ -1389,7 +1392,6 @@ h6 {
     font-size: 40px;
   }
 
-
   #intro .intro-info h2 {
     font-size: 35px;
     margin-top: 30px;
@@ -1429,7 +1431,6 @@ h6 {
     font-weight: 500;
     font-size: 35px;
   }
-
 
   #intro .intro-info h2 {
     font-size: 26px;
