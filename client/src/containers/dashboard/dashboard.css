@@ -28,6 +28,10 @@ span.tags {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  box-shadow: 0 5.8px 2.2px rgba(0, 0, 0, 0.022),
+    0 11.1px 5.3px rgba(0, 0, 0, 0.024), 0 16.1px 10px rgba(0, 0, 0, 0.022),
+    0 21.6px 17.9px rgba(0, 0, 0, 0.019), 0 30.3px 33.4px rgba(0, 0, 0, 0.019),
+    0 60px 80px rgba(0, 0, 0, 0.03);
   margin: 0 10px 40px 10px;
   background: #fff;
   transition: all 0.3s ease-in-out;
