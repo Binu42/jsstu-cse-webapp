@@ -109,6 +109,18 @@ button {
     0 11.1px 5.3px rgba(0, 0, 0, 0.024), 0 16.1px 10px rgba(0, 0, 0, 0.022),
     0 21.6px 17.9px rgba(0, 0, 0, 0.019), 0 30.3px 33.4px rgba(0, 0, 0, 0.019),
     0 60px 80px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.008);
+  box-shadow: 0 18px 41.6px -45px rgba(0, 0, 0, 0.016),
+    0 28.4px 65px -45px rgba(0, 0, 0, 0.038),
+    0 35.3px 81.9px -45px rgba(0, 0, 0, 0.084),
+    0 43px 103.7px -45px rgba(0, 0, 0, 0.103),
+    0 66px 180px -45px rgba(0, 0, 0, 0.11);
+
+  /* transition: 1s all; */
 }
 
 #close {

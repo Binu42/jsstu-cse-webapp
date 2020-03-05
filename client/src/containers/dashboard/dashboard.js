@@ -13,8 +13,8 @@ class Dashboard extends Component {
     this.state = {
       subjects: [],
       // "baseUrl": 'https://jssstu-cs.herokuapp.com',
-      // "baseUrl": "http://localhost:4000",
-      "baseUrl": "http://10.24.30.34:4000",
+      "baseUrl": "http://localhost:4000",
+      // "baseUrl": "http://10.24.30.34:4000",
       "currentPassword": "",
       "newPassword": "",
       "confirmPassword": "",

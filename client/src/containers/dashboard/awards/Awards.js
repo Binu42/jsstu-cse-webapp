@@ -17,8 +17,8 @@ export default class App extends Component {
       cards: [],
       award: {},
       // "baseUrl": 'https://jssstu-cs.herokuapp.com',
-      // "baseUrl": "http://10.24.30.34:4000",
       "baseUrl": "http://10.24.30.34:4000",
+      // "baseUrl": "http://10.24.30.34:4000",
       "adding": false,
       loader: false
     }
